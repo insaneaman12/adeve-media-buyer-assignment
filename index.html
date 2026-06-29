@@ -10,283 +10,237 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f5f6f8; --surface:#ffffff; --ink:#15181f; --ink-soft:#5b6472; --ink-faint:#8a93a3;
-  --line:#e6e8ed; --line-strong:#d4d8e0;
-  --brand:#4338ca; --brand-ink:#3730a3; --brand-soft:#eef0fe; --brand-ring:rgba(67,56,202,.25);
-  --good:#0f9d6b; --good-soft:#e6f7f0; --warn:#b7791f; --warn-soft:#fdf6e7; --bad:#d33a36; --bad-soft:#fdeceb;
-  --radius:14px; --shadow:0 1px 2px rgba(20,24,31,.04),0 8px 28px rgba(20,24,31,.06);
+  --bg:#fbfbfc; --surface:#ffffff; --ink:#1a1d24; --soft:#646b78; --faint:#9aa1ad;
+  --line:#ecedf1; --line2:#e0e2e8;
+  --brand:#4f46e5; --brand-ink:#4338ca; --brand-soft:#f0f1fe;
+  --good:#11936a; --good-soft:#e9f7f1; --warn:#9a6b14; --warn-soft:#faf3e3; --bad:#d2403c; --bad-soft:#fdeceb;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:var(--brand)}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
-.topbar .inner{max-width:980px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:18px}
-.brand .mark{width:26px;height:26px;border-radius:8px;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800}
-.brand .sub{font-weight:500;color:var(--ink-faint);font-size:12.5px;letter-spacing:.02em}
-.wrap{max-width:980px;margin:0 auto;padding:30px 22px 120px}
-.hero{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:30px 30px 26px;margin-bottom:26px}
-.eyebrow{color:var(--brand);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
-h1{font-size:27px;line-height:1.2;letter-spacing:-.02em;margin:0 0 10px;font-weight:800}
-.lead{color:var(--ink-soft);margin:0 0 18px;max-width:60ch}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-.chip{display:inline-flex;align-items:center;gap:6px;background:#f3f4f8;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink-soft);font-weight:500}
-.chip b{color:var(--ink)}
-.callout{background:var(--brand-soft);border:1px solid #dfe1fb;border-radius:12px;padding:13px 15px;font-size:14px;color:var(--brand-ink)}
-.callout b{color:var(--brand-ink)}
-.section{margin-top:30px}
-.sec-head{display:flex;align-items:flex-start;gap:13px;margin:0 0 6px}
-.sec-num{flex:none;width:30px;height:30px;border-radius:9px;background:var(--brand);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center;margin-top:1px}
-.sec-head h2{font-size:19px;letter-spacing:-.01em;margin:2px 0 0;font-weight:700}
-.sec-head .hint{color:var(--ink-soft);font-size:13.5px;margin:3px 0 0}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px;margin-top:14px}
-.card.tight{padding:0;overflow:hidden}
-h3{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);font-weight:700;margin:20px 0 9px}
-h3:first-child{margin-top:4px}
-details.sop{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:4px 20px;margin-bottom:26px}
-details.sop>summary{cursor:pointer;font-weight:600;color:var(--brand);padding:13px 0;list-style:none;display:flex;align-items:center;gap:8px}
+.topbar{border-bottom:1px solid var(--line);background:var(--surface)}
+.topbar .inner{max-width:780px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.01em;font-size:17px}
+.brand .mark{width:24px;height:24px;border-radius:7px;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:800}
+.brand .sub{font-weight:500;color:var(--faint);font-size:12px}
+.note{color:var(--faint);font-size:12.5px}
+.wrap{max-width:780px;margin:0 auto;padding:44px 24px 140px}
+.eyebrow{color:var(--brand);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px}
+h1{font-size:28px;line-height:1.22;letter-spacing:-.02em;margin:0 0 12px;font-weight:800}
+.lead{color:var(--soft);margin:0 0 20px;font-size:16px}
+.meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--soft);font-size:13.5px;padding-bottom:4px}
+.meta b{color:var(--ink);font-weight:600}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+hr.sep{border:none;border-top:1px solid var(--line);margin:42px 0 0}
+.section{padding-top:38px}
+.shead{display:flex;align-items:baseline;gap:11px;margin:0 0 4px}
+.shead .n{color:var(--brand);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+.shead h2{font-size:20px;letter-spacing:-.01em;margin:0;font-weight:700}
+.hint{color:var(--soft);font-size:14px;margin:0 0 18px;max-width:62ch}
+h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600;margin:24px 0 10px}
+h3:first-child{margin-top:6px}
+/* collapsible SOP */
+details.sop{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-top:28px}
+details.sop>summary{cursor:pointer;font-weight:600;color:var(--ink);padding:15px 18px;list-style:none;display:flex;align-items:center;gap:9px}
 details.sop>summary::-webkit-details-marker{display:none}
-details.sop>summary::before{content:"+";font-size:18px;line-height:1;color:var(--brand)}
-details.sop[open]>summary::before{content:"–"}
-details.sop .body{padding:4px 0 18px;color:var(--ink-soft);font-size:14px}
-.scroll{overflow:auto;border:1px solid var(--line);border-radius:12px;max-height:340px;background:var(--surface)}
+details.sop>summary .plus{color:var(--brand);font-size:17px;width:14px;display:inline-block}
+details.sop[open]>summary .plus::after{content:"–"} details.sop>summary .plus::after{content:"+"}
+details.sop .body{padding:2px 18px 18px;color:var(--soft);font-size:14px}
+/* tabs */
+.tabs{display:flex;gap:4px;background:#f1f2f5;border-radius:10px;padding:4px;margin-bottom:6px;width:fit-content;max-width:100%;overflow:auto}
+.tab{border:none;background:transparent;color:var(--soft);font:inherit;font-size:13.5px;font-weight:600;padding:7px 14px;border-radius:7px;cursor:pointer;white-space:nowrap}
+.tab.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.tabsub{display:flex;align-items:center;justify-content:space-between;margin:10px 0 8px}
+.tabsub .t{font-size:13px;color:var(--faint);font-weight:500}
+.dl{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--line2);color:var(--soft);border-radius:8px;padding:5px 11px;font-size:12.5px;font-weight:500;cursor:pointer}
+.dl:hover{border-color:var(--brand);color:var(--brand)}
+.scroll{overflow:auto;border:1px solid var(--line);border-radius:11px;max-height:330px}
 table{border-collapse:collapse;width:100%;font-size:13px}
-thead th{position:sticky;top:0;background:#f7f8fa;color:var(--ink-faint);font-weight:600;text-align:right;padding:9px 11px;border-bottom:1px solid var(--line);white-space:nowrap}
-tbody td{padding:8px 11px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
-tbody tr:nth-child(even){background:#fafbfc}
+thead th{position:sticky;top:0;background:#fafafb;color:var(--faint);font-weight:600;text-align:right;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink)}
 tbody tr:last-child td{border-bottom:none}
 th.l,td.l{text-align:left}
-.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:9px;flex-wrap:wrap}
-.dl{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line-strong);color:var(--ink-soft);border-radius:9px;padding:6px 12px;font-size:13px;font-weight:500;cursor:pointer}
-.dl:hover{border-color:var(--brand);color:var(--brand)}
-.acct-tag{font-size:12px;font-weight:600;color:var(--ink-faint)}
-input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);border-radius:9px;padding:8px 10px;outline:none;transition:border-color .12s,box-shadow .12s}
-input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-ring)}
-.grid-tbl input{width:100%;text-align:right;padding:6px 8px}
-.grid-tbl select{width:100%;padding:6px 8px}
-.grid-tbl td{padding:5px 7px}
-textarea{width:100%;min-height:240px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.6}
-.actrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 2px;border-bottom:1px solid var(--line)}
+.muted td{color:var(--soft)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:9px 11px;outline:none;transition:border-color .12s,box-shadow .12s}
+input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+/* log grid */
+.gridwrap{overflow:auto;border:1px solid var(--line);border-radius:11px}
+table.grid{font-size:13px}
+table.grid th{background:#fafafb}
+table.grid td{padding:5px 7px;border-bottom:1px solid var(--line)}
+table.grid input{width:96px;text-align:right;padding:6px 8px}
+table.grid select{padding:6px 8px}
+/* actions */
+.actrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
 .actrow:last-child{border-bottom:none}
-.actrow .lab{font-size:14px}
-.actrow .lab small{display:block;color:var(--ink-faint);font-size:12px;font-weight:500}
-.actrow select{min-width:172px}
-.spec{display:grid;grid-template-columns:1.1fr 1.4fr 1.4fr auto;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.5px}
-.spec>div{padding:10px 13px;border-bottom:1px solid var(--line)}
-.spec .h{background:#f7f8fa;color:var(--ink-faint);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+.actrow .lab{font-size:14.5px}
+.actrow .lab small{display:block;color:var(--faint);font-size:12px;margin-top:1px}
+.actrow select{min-width:170px}
+textarea{width:100%;min-height:230px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.65}
+/* qa */
+.spec{display:grid;grid-template-columns:1fr 1.3fr 1.3fr auto;border:1px solid var(--line);border-radius:11px;overflow:hidden;font-size:13.5px}
+.spec>div{padding:11px 14px;border-bottom:1px solid var(--line)}
+.spec .h{background:#fafafb;color:var(--faint);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
 .spec .lab{font-weight:600}
-.spec .spec-val{color:var(--ink-soft)}
+.spec .v{color:var(--soft)}
 .spec .chk{display:grid;place-items:center}
 .spec input[type=checkbox]{width:18px;height:18px;accent-color:var(--brand);cursor:pointer}
-.idrow{display:flex;gap:12px;flex-wrap:wrap}
-.idrow input{flex:1;min-width:200px}
-.submitbar{position:sticky;bottom:0;z-index:40;margin-top:20px;background:linear-gradient(to top,var(--bg) 55%,transparent);padding:18px 0 6px}
-.submitbar .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.btn{background:var(--brand);color:#fff;border:none;border-radius:11px;padding:12px 22px;font-size:15px;font-weight:600;cursor:pointer;transition:transform .04s,background .12s}
-.btn:hover{background:var(--brand-ink)}
-.btn:active{transform:translateY(1px)}
-.btn:disabled{opacity:.55;cursor:not-allowed}
-.msg{font-size:13.5px;color:var(--ink-soft)}
-.msg.err{color:var(--bad)}
-.note{color:var(--ink-faint);font-size:12.5px}
-.done{text-align:center;padding:50px 24px}
-.done .tick{width:60px;height:60px;border-radius:50%;background:var(--good-soft);color:var(--good);display:grid;place-items:center;font-size:30px;margin:0 auto 18px}
-.done h1{font-size:24px}
-.done .ref{font-family:ui-monospace,Menlo,monospace;background:#f3f4f8;border:1px solid var(--line);border-radius:8px;padding:3px 9px}
+/* submit */
+.foot{position:sticky;bottom:0;margin-top:34px;background:linear-gradient(to top,var(--bg) 60%,transparent);padding:18px 0 8px}
+.foot .box{background:var(--surface);border:1px solid var(--line2);border-radius:13px;padding:15px 16px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.foot .ids{display:flex;gap:10px;flex-wrap:wrap}.foot .ids input{flex:1;min-width:170px}
+.btn{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:11px 22px;font-size:15px;font-weight:600;cursor:pointer}
+.btn:hover{background:var(--brand-ink)} .btn:disabled{opacity:.55;cursor:not-allowed}
+.msg{font-size:13.5px;color:var(--soft)} .msg.err{color:var(--bad)}
+.done{text-align:center;padding:70px 24px}
+.done .tick{width:58px;height:58px;border-radius:50%;background:var(--good-soft);color:var(--good);display:grid;place-items:center;font-size:28px;margin:0 auto 20px}
+.done .ref{font-family:ui-monospace,Menlo,monospace;background:#f1f2f5;border-radius:7px;padding:2px 8px}
 /* admin */
-.adm-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.adm input{min-width:220px}
 .tag{font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:7px;text-transform:capitalize}
-.tag.advance{background:var(--good-soft);color:var(--good)}
-.tag.hold{background:var(--warn-soft);color:var(--warn)}
-.tag.reject{background:var(--bad-soft);color:var(--bad)}
-.score{font-weight:800;font-size:18px;letter-spacing:-.02em}
-.pills{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}
-.spill{background:#f3f4f8;border:1px solid var(--line);border-radius:8px;padding:3px 9px;font-size:12.5px;color:var(--ink-soft)}
-.flagline{color:var(--bad);font-size:13px;margin:6px 0 0}
-details.sub{border-top:1px solid var(--line);padding:12px 0}
-details.sub summary{cursor:pointer;font-weight:600;list-style:none}
-details.sub summary::-webkit-details-marker{display:none}
-pre.mono{white-space:pre-wrap;background:#f7f8fa;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:12.5px;font-family:ui-monospace,Menlo,monospace;color:var(--ink-soft);margin:8px 0 0}
-@media(max-width:680px){
-  h1{font-size:23px}.wrap{padding:22px 15px 120px}.hero{padding:22px 18px}
-  .spec{grid-template-columns:1fr;}.spec>div{border-bottom:1px solid var(--line)}
-  .spec .h{display:none}
-  .actrow{flex-direction:column;align-items:stretch}.actrow select{min-width:0;width:100%}
+.tag.advance{background:var(--good-soft);color:var(--good)} .tag.hold{background:var(--warn-soft);color:var(--warn)} .tag.reject{background:var(--bad-soft);color:var(--bad)}
+.scard{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:14px;background:var(--surface)}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between}
+.score{font-weight:800;font-size:19px} .score small{color:var(--faint);font-weight:600;font-size:13px}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 0}
+.spill{background:#f4f5f8;border-radius:7px;padding:3px 9px;font-size:12.5px;color:var(--soft)}
+.flag{color:var(--bad);font-size:13px;margin:8px 0 0}
+pre.mono{white-space:pre-wrap;background:#fafafb;border:1px solid var(--line);border-radius:9px;padding:12px;font-size:12.5px;font-family:ui-monospace,Menlo,monospace;color:var(--soft);margin:8px 0 0}
+@media(max-width:640px){
+  h1{font-size:24px}.wrap{padding:30px 16px 140px}
+  .spec{grid-template-columns:1fr}.spec .h{display:none}
+  .actrow{flex-direction:column;align-items:stretch}.actrow select{width:100%}
 }
 </style>
 </head>
 <body>
 <div class="topbar"><div class="inner">
   <div class="brand"><span class="mark">A</span> Adeve <span class="sub">Performance Marketing</span></div>
-  <div class="note">Practical assignment</div>
+  <div class="note" id="topnote">Practical assignment</div>
 </div></div>
 <div class="wrap" id="root"></div>
 <script>window.BOOT={"DATA":{"googleWeek":[{"date":"2026-06-22","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":480,"clicks":24,"cost":1300,"conversions":2},{"date":"2026-06-22","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":520,"clicks":30,"cost":1500,"conversions":3},{"date":"2026-06-22","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":850,"clicks":38,"cost":1100,"conversions":1},{"date":"2026-06-22","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":580,"clicks":45,"cost":1800,"conversions":4},{"date":"2026-06-22","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":330,"clicks":21,"cost":850,"conversions":2},{"date":"2026-06-22","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":360,"clicks":21,"cost":950,"conversions":2},{"date":"2026-06-22","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":400,"clicks":15,"cost":380,"conversions":1},{"date":"2026-06-23","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":485,"clicks":24,"cost":1320,"conversions":2},{"date":"2026-06-23","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":525,"clicks":31,"cost":1520,"conversions":3},{"date":"2026-06-23","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":860,"clicks":39,"cost":1120,"conversions":1},{"date":"2026-06-23","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":600,"clicks":46,"cost":1820,"conversions":5},{"date":"2026-06-23","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":335,"clicks":21,"cost":860,"conversions":1},{"date":"2026-06-23","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":365,"clicks":21,"cost":960,"conversions":2},{"date":"2026-06-23","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":405,"clicks":15,"cost":385,"conversions":0},{"date":"2026-06-24","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":490,"clicks":25,"cost":1350,"conversions":1},{"date":"2026-06-24","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":530,"clicks":30,"cost":1540,"conversions":2},{"date":"2026-06-24","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":870,"clicks":40,"cost":1150,"conversions":0},{"date":"2026-06-24","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":590,"clicks":47,"cost":1850,"conversions":4},{"date":"2026-06-24","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":332,"clicks":21,"cost":870,"conversions":2},{"date":"2026-06-24","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":362,"clicks":21,"cost":970,"conversions":1},{"date":"2026-06-24","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":402,"clicks":15,"cost":390,"conversions":1},{"date":"2026-06-25","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":495,"clicks":25,"cost":1400,"conversions":2},{"date":"2026-06-25","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":528,"clicks":31,"cost":1560,"conversions":3},{"date":"2026-06-25","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":880,"clicks":40,"cost":1180,"conversions":0},{"date":"2026-06-25","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":610,"clicks":49,"cost":1900,"conversions":5},{"date":"2026-06-25","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":340,"clicks":22,"cost":880,"conversions":2},{"date":"2026-06-25","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":370,"clicks":22,"cost":980,"conversions":2},{"date":"2026-06-25","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":410,"clicks":16,"cost":395,"conversions":1},{"date":"2026-06-26","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":500,"clicks":25,"cost":1500,"conversions":1},{"date":"2026-06-26","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":540,"clicks":32,"cost":1600,"conversions":3},{"date":"2026-06-26","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":900,"clicks":40,"cost":1200,"conversions":0},{"date":"2026-06-26","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":600,"clicks":48,"cost":1900,"conversions":5},{"date":"2026-06-26","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":350,"clicks":22,"cost":900,"conversions":2},{"date":"2026-06-26","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":380,"clicks":22,"cost":1000,"conversions":2},{"date":"2026-06-26","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":420,"clicks":16,"cost":400,"conversions":1},{"date":"2026-06-27","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":510,"clicks":25,"cost":1500,"conversions":2},{"date":"2026-06-27","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":545,"clicks":33,"cost":1600,"conversions":3},{"date":"2026-06-27","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":920,"clicks":41,"cost":1200,"conversions":0},{"date":"2026-06-27","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":640,"clicks":51,"cost":2050,"conversions":6},{"date":"2026-06-27","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":355,"clicks":23,"cost":900,"conversions":2},{"date":"2026-06-27","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":385,"clicks":22,"cost":1000,"conversions":2},{"date":"2026-06-27","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":425,"clicks":16,"cost":400,"conversions":1},{"date":"2026-06-28","ad_group":"Cataract_Surgery","keyword":"best cataract hospital","match_type":"Phrase","impressions":505,"clicks":25,"cost":1500,"conversions":1},{"date":"2026-06-28","ad_group":"Cataract_Surgery","keyword":"cataract operation near me","match_type":"Phrase","impressions":535,"clicks":31,"cost":1600,"conversions":3},{"date":"2026-06-28","ad_group":"Cataract_Surgery","keyword":"cataract surgery","match_type":"Broad","impressions":910,"clicks":40,"cost":1200,"conversions":0},{"date":"2026-06-28","ad_group":"Cataract_Surgery","keyword":"cataract surgery cost","match_type":"Phrase","impressions":630,"clicks":50,"cost":2050,"conversions":5},{"date":"2026-06-28","ad_group":"Lasik_Surgery","keyword":"lasik eye surgery","match_type":"Phrase","impressions":352,"clicks":22,"cost":900,"conversions":2},{"date":"2026-06-28","ad_group":"Lasik_Surgery","keyword":"lasik surgery cost","match_type":"Phrase","impressions":382,"clicks":22,"cost":1000,"conversions":2},{"date":"2026-06-28","ad_group":"Lasik_Surgery","keyword":"spectacle removal surgery","match_type":"Broad","impressions":422,"clicks":16,"cost":400,"conversions":1}],"searchTerms":[{"search_term":"cataract surgery cost in hyderabad","matched_keyword":"cataract surgery cost","cost":420,"clicks":12,"conversions":2},{"search_term":"free cataract surgery government","matched_keyword":"cataract surgery","cost":1150,"clicks":30,"conversions":0},{"search_term":"cataract surgery cost","matched_keyword":"cataract surgery cost","cost":600,"clicks":10,"conversions":3},{"search_term":"cataract operation video youtube","matched_keyword":"cataract surgery","cost":900,"clicks":22,"conversions":0},{"search_term":"best cataract hospital near me","matched_keyword":"best cataract hospital","cost":520,"clicks":9,"conversions":1},{"search_term":"eye hospital jobs","matched_keyword":"cataract surgery","cost":850,"clicks":18,"conversions":0},{"search_term":"lasik surgery cost","matched_keyword":"lasik surgery cost","cost":480,"clicks":8,"conversions":2},{"search_term":"is lasik painful","matched_keyword":"lasik eye surgery","cost":300,"clicks":7,"conversions":0},{"search_term":"spectacle removal surgery cost","matched_keyword":"spectacle removal surgery","cost":260,"clicks":5,"conversions":1},{"search_term":"cataract surgery emi","matched_keyword":"cataract surgery cost","cost":350,"clicks":6,"conversions":1},{"search_term":"lasik vs smile surgery","matched_keyword":"lasik eye surgery","cost":780,"clicks":14,"conversions":0},{"search_term":"cataract hospital fees","matched_keyword":"best cataract hospital","cost":540,"clicks":9,"conversions":2}],"metaWeek":[{"date":"2026-06-22","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1600,"impressions":82000,"clicks":1240,"registrations":18,"frequency":1.6},{"date":"2026-06-22","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2400,"impressions":123000,"clicks":1860,"registrations":26,"frequency":1.6},{"date":"2026-06-22","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":2900,"impressions":155000,"clicks":2100,"registrations":19,"frequency":1.8},{"date":"2026-06-22","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":925,"impressions":46000,"clicks":760,"registrations":7,"frequency":2.6},{"date":"2026-06-22","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":925,"impressions":46000,"clicks":760,"registrations":6,"frequency":2.6},{"date":"2026-06-22","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1400,"impressions":93000,"clicks":1080,"registrations":3,"frequency":2},{"date":"2026-06-23","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1620,"impressions":82400,"clicks":1248,"registrations":18,"frequency":1.6},{"date":"2026-06-23","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2430,"impressions":123600,"clicks":1872,"registrations":27,"frequency":1.6},{"date":"2026-06-23","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":2920,"impressions":156000,"clicks":2120,"registrations":19,"frequency":1.9},{"date":"2026-06-23","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":940,"impressions":45750,"clicks":755,"registrations":7,"frequency":2.8},{"date":"2026-06-23","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":940,"impressions":45750,"clicks":755,"registrations":6,"frequency":2.8},{"date":"2026-06-23","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1420,"impressions":93500,"clicks":1090,"registrations":2,"frequency":2.1},{"date":"2026-06-24","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1640,"impressions":83200,"clicks":1260,"registrations":18,"frequency":1.7},{"date":"2026-06-24","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2460,"impressions":124800,"clicks":1890,"registrations":28,"frequency":1.7},{"date":"2026-06-24","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":2950,"impressions":158000,"clicks":2150,"registrations":20,"frequency":2},{"date":"2026-06-24","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":950,"impressions":45500,"clicks":750,"registrations":7,"frequency":2.9},{"date":"2026-06-24","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":950,"impressions":45500,"clicks":750,"registrations":6,"frequency":2.9},{"date":"2026-06-24","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1450,"impressions":94000,"clicks":1095,"registrations":1,"frequency":2.2},{"date":"2026-06-25","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1660,"impressions":83600,"clicks":1272,"registrations":18,"frequency":1.7},{"date":"2026-06-25","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2490,"impressions":125400,"clicks":1908,"registrations":28,"frequency":1.7},{"date":"2026-06-25","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":2980,"impressions":159000,"clicks":2180,"registrations":20,"frequency":2},{"date":"2026-06-25","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":975,"impressions":45250,"clicks":745,"registrations":7,"frequency":3},{"date":"2026-06-25","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":975,"impressions":45250,"clicks":745,"registrations":6,"frequency":3},{"date":"2026-06-25","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1480,"impressions":94500,"clicks":1100,"registrations":1,"frequency":2.3},{"date":"2026-06-26","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1640,"impressions":84000,"clicks":1280,"registrations":18,"frequency":1.8},{"date":"2026-06-26","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2460,"impressions":126000,"clicks":1920,"registrations":27,"frequency":1.8},{"date":"2026-06-26","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":3000,"impressions":160000,"clicks":2200,"registrations":20,"frequency":2.1},{"date":"2026-06-26","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":1000,"impressions":45000,"clicks":750,"registrations":7,"frequency":3.2},{"date":"2026-06-26","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":1000,"impressions":45000,"clicks":750,"registrations":6,"frequency":3.2},{"date":"2026-06-26","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1500,"impressions":95000,"clicks":1100,"registrations":0,"frequency":2.4},{"date":"2026-06-27","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1680,"impressions":86000,"clicks":1320,"registrations":19,"frequency":1.9},{"date":"2026-06-27","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2520,"impressions":129000,"clicks":1980,"registrations":28,"frequency":1.9},{"date":"2026-06-27","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":3000,"impressions":162000,"clicks":2250,"registrations":20,"frequency":2.2},{"date":"2026-06-27","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":1000,"impressions":44000,"clicks":740,"registrations":7,"frequency":3.4},{"date":"2026-06-27","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":1000,"impressions":44000,"clicks":740,"registrations":6,"frequency":3.4},{"date":"2026-06-27","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1500,"impressions":96000,"clicks":1120,"registrations":0,"frequency":2.5},{"date":"2026-06-28","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_Carousel","spend":1720,"impressions":88000,"clicks":1360,"registrations":19,"frequency":2},{"date":"2026-06-28","ad_set":"AS01_Lookalike_2pct","ad":"AD_LAL_VideoTestimonial","spend":2580,"impressions":132000,"clicks":2040,"registrations":29,"frequency":2},{"date":"2026-06-28","ad_set":"AS02_Interest_Investing","ad":"AD_INT_StaticHook","spend":3000,"impressions":164000,"clicks":2300,"registrations":20,"frequency":2.3},{"date":"2026-06-28","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_StaticDeadline","spend":1000,"impressions":43000,"clicks":730,"registrations":7,"frequency":3.6},{"date":"2026-06-28","ad_set":"AS03_Broad_Retargeting","ad":"AD_RT_VideoReminder","spend":1000,"impressions":43000,"clicks":730,"registrations":7,"frequency":3.6},{"date":"2026-06-28","ad_set":"AS04_Interest_StockMarket","ad":"AD_STK_StaticHook","spend":1500,"impressions":97000,"clicks":1130,"registrations":0,"frequency":2.6}]},"ITEMS":{"keywords":[{"id":"g_kw_cscost","label":"cataract surgery cost — Phrase — Cataract_Surgery"},{"id":"g_kw_conear","label":"cataract operation near me — Phrase — Cataract_Surgery"},{"id":"g_kw_bch","label":"best cataract hospital — Phrase — Cataract_Surgery"},{"id":"g_kw_csbroad","label":"cataract surgery — Broad — Cataract_Surgery"},{"id":"g_kw_lscost","label":"lasik surgery cost — Phrase — Lasik_Surgery"},{"id":"g_kw_les","label":"lasik eye surgery — Phrase — Lasik_Surgery"},{"id":"g_kw_srs","label":"spectacle removal surgery — Broad — Lasik_Surgery"}],"adsets":[{"id":"m_as01","label":"AS01_Lookalike_2pct"},{"id":"m_as02","label":"AS02_Interest_Investing"},{"id":"m_as03","label":"AS03_Broad_Retargeting"},{"id":"m_as04","label":"AS04_Interest_StockMarket"}],"searchTerms":[{"id":"st_1","label":"cataract surgery cost in hyderabad"},{"id":"st_2","label":"free cataract surgery government"},{"id":"st_3","label":"cataract surgery cost"},{"id":"st_4","label":"cataract operation video youtube"},{"id":"st_5","label":"best cataract hospital near me"},{"id":"st_6","label":"eye hospital jobs"},{"id":"st_7","label":"lasik surgery cost"},{"id":"st_8","label":"is lasik painful"},{"id":"st_9","label":"spectacle removal surgery cost"},{"id":"st_10","label":"cataract surgery emi"},{"id":"st_11","label":"lasik vs smile surgery"},{"id":"st_12","label":"cataract hospital fees"}]},"LOGROWS":[{"date":"2026-06-22","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-23","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-24","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-25","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-26","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-27","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-28","account":"Google - Drishti Cataract","target":600},{"date":"2026-06-22","account":"Meta - Wealth Wisdom Webinar","target":150},{"date":"2026-06-23","account":"Meta - Wealth Wisdom Webinar","target":150},{"date":"2026-06-24","account":"Meta - Wealth Wisdom Webinar","target":150},{"date":"2026-06-25","account":"Meta - Wealth Wisdom Webinar","target":150},{"date":"2026-06-26","account":"Meta - Wealth Wisdom Webinar","target":150},{"date":"2026-06-27","account":"Meta - Wealth Wisdom Webinar","target":150},{"date":"2026-06-28","account":"Meta - Wealth Wisdom Webinar","target":150}],"QA_FIELDS":[{"id":"objective","label":"Campaign objective","asbuilt":"Leads","spec":"Leads"},{"id":"conversion_event","label":"Conversion event","asbuilt":"ViewContent","spec":"CompleteRegistration"},{"id":"budget","label":"Budget type & amount","asbuilt":"Lifetime budget ₹21,000 at ad set level, CBO off","spec":"Daily budget ₹3,000 at ad set level, CBO off"},{"id":"locations","label":"Locations","asbuilt":"India, no exclusions (all India)","spec":"India, EXCLUDE Andaman & Nicobar Islands and Lakshadweep"},{"id":"age","label":"Age","asbuilt":"28–55","spec":"28–55"},{"id":"gender","label":"Gender","asbuilt":"All","spec":"All"},{"id":"schedule","label":"Schedule","asbuilt":"Starts 2026-07-01, no end date","spec":"Starts 2026-07-01, no end date"},{"id":"placements","label":"Placements","asbuilt":"Advantage+ placements (automatic)","spec":"Advantage+ placements (automatic)"},{"id":"optimization","label":"Optimization goal","asbuilt":"Maximise number of registrations (conversions)","spec":"Maximise number of registrations (conversions)"},{"id":"naming","label":"Ad set name","asbuilt":"WW_Webinar_LAL_2pct_0701","spec":"WW_Webinar_[Type]_[Audience]_[MMDD] e.g. WW_Webinar_LAL_2pct_0701"}]};window.API="https://bostzzkgxwucqkglhlpy.supabase.co/functions/v1/assignment";</script>
 <script>
 (function(){
   "use strict";
-  var B = window.BOOT, API = window.API, root = document.getElementById("root");
-  var isAdmin = /[?#].*admin/.test(location.href);
-  var rupee = function(n){ return "₹" + Number(n).toLocaleString("en-IN"); };
-  var rnd = function(x,d){ var p=Math.pow(10,d); return Math.round(x*p)/p; };
-  var esc = function(x){ return String(x==null?"":x).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];}); };
-
-  function csv(name, rows, cols){
-    var out = cols.join(",") + "\n" + rows.map(function(r){ return cols.map(function(k){ return r[k]==null?"":r[k]; }).join(","); }).join("\n");
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob([out],{type:"text/csv"}));
-    a.download = name; a.click();
-  }
-  // ---- display augmentation (compute metrics from raw) ----
-  function augG(r){ return {date:r.date,ad_group:r.ad_group,keyword:r.keyword,match_type:r.match_type,impressions:r.impressions,clicks:r.clicks,ctr:rnd(r.clicks/r.impressions*100,2),cpc:rnd(r.cost/r.clicks,2),cost:r.cost,conv:r.conversions,cpa:r.conversions?rnd(r.cost/r.conversions,2):"",cvr:rnd(r.conversions/r.clicks*100,2)}; }
-  function augM(r){ return {date:r.date,ad_set:r.ad_set,ad:r.ad,spend:r.spend,impressions:r.impressions,clicks:r.clicks,ctr:rnd(r.clicks/r.impressions*100,2),cpm:rnd(r.spend/r.impressions*1000,2),regs:r.registrations,cpr:r.registrations?rnd(r.spend/r.registrations,2):"",freq:r.frequency}; }
-
-  function table(rows, cols, labels){
-    var strc = {}; cols.forEach(function(c){ strc[c] = typeof rows[0][c] === "string"; });
-    var h = "<thead><tr>" + cols.map(function(c,i){ return "<th"+(strc[c]?" class=l":"")+">"+(labels?labels[i]:c)+"</th>"; }).join("") + "</tr></thead>";
-    var b = "<tbody>" + rows.map(function(r){ return "<tr>" + cols.map(function(c){ var v=r[c]; return "<td"+(strc[c]?" class=l":"")+">"+(v==null||v===""?"":v)+"</td>"; }).join("") + "</tr>"; }).join("") + "</tbody>";
-    var t = document.createElement("table"); t.innerHTML = h + b;
-    var w = document.createElement("div"); w.className = "scroll"; w.appendChild(t); return w;
+  var B=window.BOOT, API=window.API, root=document.getElementById("root");
+  var esc=function(x){return String(x==null?"":x).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c];});};
+  var rnd=function(x,d){var p=Math.pow(10,d);return Math.round(x*p)/p;};
+  function dl(name,rows,cols){var out=cols.join(",")+"\n"+rows.map(function(r){return cols.map(function(k){return r[k]==null?"":r[k];}).join(",");}).join("\n");var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([out],{type:"text/csv"}));a.download=name;a.click();}
+  function augG(r){return{date:r.date,ad_group:r.ad_group,keyword:r.keyword,match_type:r.match_type,impressions:r.impressions,clicks:r.clicks,ctr_pct:rnd(r.clicks/r.impressions*100,2),avg_cpc:rnd(r.cost/r.clicks,2),cost:r.cost,conversions:r.conversions,cpa:r.conversions?rnd(r.cost/r.conversions,2):"",conv_rate_pct:rnd(r.conversions/r.clicks*100,2)};}
+  function augM(r){return{date:r.date,ad_set:r.ad_set,ad:r.ad,spend:r.spend,impressions:r.impressions,clicks:r.clicks,ctr_pct:rnd(r.clicks/r.impressions*100,2),cpm:rnd(r.spend/r.impressions*1000,2),registrations:r.registrations,cost_per_registration:r.registrations?rnd(r.spend/r.registrations,2):"",frequency:r.frequency};}
+  function tbl(rows,cols,labels){
+    var strc={};cols.forEach(function(c){strc[c]=typeof rows[0][c]==="string";});
+    var h="<thead><tr>"+cols.map(function(c,i){return "<th"+(strc[c]?" class=l":"")+">"+(labels?labels[i]:c)+"</th>";}).join("")+"</tr></thead>";
+    var b="<tbody>"+rows.map(function(r){return "<tr>"+cols.map(function(c){var v=r[c];return "<td"+(strc[c]?" class=l":"")+">"+(v==null||v===""?"":v)+"</td>";}).join("")+"</tr>";}).join("")+"</tbody>";
+    var t=document.createElement("table");t.innerHTML=h+b;var w=document.createElement("div");w.className="scroll";w.appendChild(t);return w;
   }
 
-  if (isAdmin) return renderAdmin();
+  if(/[?#].*admin/.test(location.href)) return renderAdmin();
 
-  /* =================== CANDIDATE =================== */
-  var GW = B.DATA.googleWeek.map(augG), MW = B.DATA.metaWeek.map(augM);
-  var GCOL=["date","ad_group","keyword","match_type","impressions","clicks","ctr","cpc","cost","conv","cpa","cvr"];
-  var GLAB=["date","ad group","keyword","match","impr","clicks","ctr %","avg cpc","cost","conv","cpa","cvr %"];
-  var MCOL=["date","ad_set","ad","spend","impressions","clicks","ctr","cpm","regs","cpr","freq"];
-  var MLAB=["date","ad set","ad","spend","impr","clicks","ctr %","cpm","regs","cost/reg","freq"];
-  var SCOL=["search_term","matched_keyword","cost","clicks","conversions"];
-  var SLAB=["search term","matched keyword","cost","clicks","conv"];
+  /* ===== CANDIDATE ===== */
+  var GW=B.DATA.googleWeek.map(augG), MW=B.DATA.metaWeek.map(augM);
+  // compact display columns (full set still in CSV downloads)
+  var Gc=["date","keyword","match_type","clicks","cost","conversions","cpa"], Gl=["date","keyword","match","clicks","cost","conv","cpa"];
+  var Gfull=["date","ad_group","keyword","match_type","impressions","clicks","ctr_pct","avg_cpc","cost","conversions","cpa","conv_rate_pct"];
+  var Mc=["date","ad_set","ad","clicks","spend","registrations","cost_per_registration","frequency"], Ml=["date","ad set","ad","clicks","spend","regs","cost/reg","freq"];
+  var Mfull=["date","ad_set","ad","spend","impressions","clicks","ctr_pct","cpm","registrations","cost_per_registration","frequency"];
+  var Sc=["search_term","matched_keyword","cost","clicks","conversions"], Sl=["search term","matched keyword","cost","clicks","conv"];
 
-  root.innerHTML =
-    '<div class="hero">'+
-      '<p class="eyebrow">Junior Media Buyer / Platform Operator</p>'+
-      '<h1>Run our system for one day — accurately and fast.</h1>'+
-      '<p class="lead">Adeve runs Meta + Google ad accounts day in, day out. This task checks one thing: can you execute our daily routine exactly as written? Strategy is handled by the team — we are testing precision, not ideas.</p>'+
-      '<div class="chips"><span class="chip">⏱ <b>~30–45 min</b></span><span class="chip">🤖 <b>Use AI freely</b> — we expect it</span><span class="chip">✓ <b>Precision</b> &gt; volume</span></div>'+
-      '<div class="callout"><b>How it’s judged:</b> the accuracy and judgment of your output — not whether you used AI. Apply every numeric rule literally, follow the formats exactly, and don’t propose new strategy. Just run the system.</div>'+
-    '</div>'+
-    '<details class="sop"><summary>Read first — SOP, targets &amp; rules</summary><div class="body" id="sop"></div></details>'+
+  root.innerHTML=
+    '<p class="eyebrow">Junior Media Buyer / Platform Operator</p>'+
+    '<h1>Run our daily system once — accurately and fast.</h1>'+
+    '<p class="lead">Adeve runs Meta + Google ad accounts every day. This checks one thing: can you execute our routine exactly as written? Strategy is the team’s job — we’re testing precision, not ideas.</p>'+
+    '<div class="meta"><span>⏱ <b>~30–45 min</b></span><span>🤖 <b>Use AI freely</b></span><span>✓ <b>Precision</b> over volume</span></div>'+
+    '<p class="note" style="margin:14px 0 0">Judged on accuracy &amp; judgment, not whether you used AI. Apply every numeric rule literally, follow the formats, and don’t propose new strategy.</p>'+
 
-    '<div class="section"><div class="sec-head"><span class="sec-num">·</span><div><h2>The data</h2><p class="hint">Two accounts, 7 days each. Every rule below uses the <b>3-day window = 26, 27, 28 Jun</b>. Tables scroll; download any as CSV.</p></div></div>'+
-      '<h3>Google Search — Drishti Cataract <span class="acct-tag">&nbsp;target CPA ₹600</span></h3><div class="toolbar"><button class="dl" id="dg">↓ google_search_week.csv</button></div><div id="tg"></div>'+
-      '<h3>Google — Search terms <span class="acct-tag">&nbsp;last 7 days</span></h3><div class="toolbar"><button class="dl" id="ds">↓ google_search_terms.csv</button></div><div id="ts"></div>'+
-      '<h3>Meta — Wealth Wisdom Webinar <span class="acct-tag">&nbsp;target cost/reg ₹150</span></h3><div class="toolbar"><button class="dl" id="dm">↓ meta_webinar_week.csv</button></div><div id="tm"></div>'+
+    '<details class="sop"><summary><span class="plus"></span> Read first — SOP, targets &amp; rules</summary><div class="body" id="sop"></div></details>'+
+
+    '<hr class="sep"><div class="section"><div class="shead"><span class="n">Data</span><h2>Account data</h2></div>'+
+      '<p class="hint">Two accounts, 7 days. Every rule uses the <b>3-day window = 26–28 Jun</b>. Switch accounts with the tabs; download the full data (all columns) as CSV.</p>'+
+      '<div class="tabs" id="tabs"></div><div class="tabsub"><span class="t" id="tabt"></span><button class="dl" id="dlbtn">↓ Download CSV</button></div><div id="panel"></div>'+
     '</div>'+
 
-    '<div class="section"><div class="sec-head"><span class="sec-num">1</span><div><h2>Fill the daily log</h2><p class="hint">One row per account per day. Sum the data for that account &amp; day. cost/result = spend ÷ results, rounded to nearest ₹1. Status compares that day’s cost/result to target.</p></div></div><div class="card tight"><div id="logtbl"></div></div></div>'+
+    '<hr class="sep"><div class="section"><div class="shead"><span class="n">1</span><h2>Fill the daily log</h2></div>'+
+      '<p class="hint">One row per account per day. Sum the data for that account &amp; day. cost/result = spend ÷ results, rounded to nearest ₹1. Status compares the day’s cost/result to target.</p><div id="logtbl"></div></div>'+
 
-    '<div class="section"><div class="sec-head"><span class="sec-num">2</span><div><h2>Apply the rules</h2><p class="hint">Over the 3-day window (26–28 Jun), pick the action each rule produces. Most items are <b>No action</b> — only act where a rule truly fires.</p></div></div>'+
-      '<div class="card"><h3>Keywords — Google</h3><div id="kw"></div><h3>Ad sets — Meta</h3><div id="as"></div><h3>Search terms — add as negative?</h3><div id="st"></div></div></div>'+
+    '<hr class="sep"><div class="section"><div class="shead"><span class="n">2</span><h2>Apply the rules</h2></div>'+
+      '<p class="hint">Over 26–28 Jun, pick the action each rule produces. Most items are <b>No action</b> — only act where a rule truly fires.</p>'+
+      '<h3>Keywords — Google</h3><div id="kw"></div><h3>Ad sets — Meta</h3><div id="as"></div><h3>Search terms — add as negative?</h3><div id="st"></div></div>'+
 
-    '<div class="section"><div class="sec-head"><span class="sec-num">3</span><div><h2>Status update</h2><p class="hint">The Monday message you’d send the team. Header uses yesterday (28 Jun); actions use your Task 2 outcomes. Keep the format.</p></div></div><div class="card"><textarea id="status"></textarea></div></div>'+
+    '<hr class="sep"><div class="section"><div class="shead"><span class="n">3</span><h2>Status update</h2></div>'+
+      '<p class="hint">The Monday message you’d send the team. Header uses yesterday (28 Jun); actions use your Task 2 outcomes. Keep the format.</p><textarea id="status"></textarea></div>'+
 
-    '<div class="section"><div class="sec-head"><span class="sec-num">4</span><div><h2>Setup QA</h2><p class="hint">A junior built this Meta campaign. Compare AS-BUILT to SPEC and tick every field that does <b>not</b> match. Only tick real mismatches.</p></div></div><div class="card"><div id="qa"></div></div></div>'+
+    '<hr class="sep"><div class="section"><div class="shead"><span class="n">4</span><h2>Setup QA</h2></div>'+
+      '<p class="hint">A junior built this Meta campaign. Compare as-built to spec and tick every field that does <b>not</b> match. Only tick real mismatches.</p><div id="qa"></div></div>'+
 
-    '<div class="submitbar"><div class="box"><div class="idrow"><input id="cname" placeholder="Your name" autocomplete="name"><input id="cmail" placeholder="Email" autocomplete="email" type="email"></div><div style="display:flex;align-items:center;gap:12px"><span id="msg" class="msg"></span><button class="btn" id="send">Submit assignment</button></div></div></div>';
+    '<div class="foot"><div class="box"><div class="ids"><input id="cname" placeholder="Your name" autocomplete="name"><input id="cmail" placeholder="Email" type="email" autocomplete="email"></div><div style="display:flex;align-items:center;gap:12px"><span id="msg" class="msg"></span><button class="btn" id="send">Submit</button></div></div></div>';
 
-  document.getElementById("sop").innerHTML = sopHtml();
-  document.getElementById("tg").appendChild(table(GW, GCOL, GLAB));
-  document.getElementById("ts").appendChild(table(B.DATA.searchTerms, SCOL, SLAB));
-  document.getElementById("tm").appendChild(table(MW, MCOL, MLAB));
-  document.getElementById("dg").onclick = function(){ csv("google_search_week.csv", GW, GCOL); };
-  document.getElementById("ds").onclick = function(){ csv("google_search_terms.csv", B.DATA.searchTerms, SCOL); };
-  document.getElementById("dm").onclick = function(){ csv("meta_webinar_week.csv", MW, MCOL); };
+  document.getElementById("sop").innerHTML=sopHtml();
 
-  // ---- Task 1 grid ----
-  var logState = {};
+  // tabs for data
+  var TABS=[
+    {k:"g",name:"Google Search",sub:"Drishti Cataract · target CPA ₹600",rows:GW,cols:Gc,labels:Gl,file:"google_search_week.csv",full:Gfull},
+    {k:"s",name:"Search terms",sub:"Drishti Cataract · last 7 days",rows:B.DATA.searchTerms,cols:Sc,labels:Sl,file:"google_search_terms.csv",full:Sc},
+    {k:"m",name:"Meta Webinar",sub:"Wealth Wisdom · target cost/reg ₹150",rows:MW,cols:Mc,labels:Ml,file:"meta_webinar_week.csv",full:Mfull}
+  ];
+  var cur=0;
+  var tabsEl=document.getElementById("tabs");
+  TABS.forEach(function(t,i){var b=document.createElement("button");b.className="tab"+(i===0?" on":"");b.textContent=t.name;b.onclick=function(){cur=i;showTab();};tabsEl.appendChild(b);});
+  function showTab(){
+    [].forEach.call(tabsEl.children,function(b,i){b.className="tab"+(i===cur?" on":"");});
+    var t=TABS[cur];
+    document.getElementById("tabt").textContent=t.sub;
+    var p=document.getElementById("panel");p.innerHTML="";p.appendChild(tbl(t.rows,t.cols,t.labels));
+  }
+  document.getElementById("dlbtn").onclick=function(){var t=TABS[cur];dl(t.file,t.rows,t.full);};
+  showTab();
+
+  // Task 1
+  var logState={};
   (function(){
-    var cols = ["date","account","spend","clicks","results","cost/result","target","status"];
-    var t = document.createElement("table"); t.className="grid-tbl";
-    t.innerHTML = "<thead><tr>" + cols.map(function(c){ return "<th"+(c==="date"||c==="account"?" class=l":"")+">"+c+"</th>"; }).join("") + "</tr></thead>";
-    var tb = document.createElement("tbody");
+    var cols=["date","account","spend","clicks","results","cost/result","target","status"];
+    var t=document.createElement("table");t.className="grid";
+    t.innerHTML="<thead><tr>"+cols.map(function(c){return "<th"+(c==="date"||c==="account"?" class=l":"")+">"+c+"</th>";}).join("")+"</tr></thead>";
+    var tb=document.createElement("tbody");
     B.LOGROWS.forEach(function(r){
-      var key = r.date + "|" + r.account; logState[key] = {};
-      var tr = document.createElement("tr");
-      tr.innerHTML = "<td class=l>"+r.date+"</td><td class=l>"+r.account.replace(" - ","<br><small style='color:var(--ink-faint)'>")+"</small></td>";
-      ["spend","clicks","results","cost_per_result"].forEach(function(f){
-        var td=document.createElement("td"); var inp=document.createElement("input");
-        inp.type="number"; inp.inputMode="numeric";
-        inp.oninput=function(){ logState[key][f]=inp.value; };
-        td.appendChild(inp); tr.appendChild(td);
-      });
-      var tt=document.createElement("td"); tt.textContent=String(r.target); tr.appendChild(tt);
-      var sd=document.createElement("td"); var sel=document.createElement("select");
-      ["","Under target","At target","Over target"].forEach(function(o){ var op=document.createElement("option"); op.value=o; op.textContent=o||"—"; sel.appendChild(op); });
-      sel.onchange=function(){ logState[key].status=sel.value; };
-      sd.appendChild(sel); tr.appendChild(sd); tb.appendChild(tr);
+      var key=r.date+"|"+r.account;logState[key]={};
+      var tr=document.createElement("tr");
+      var acc=r.account.split(" - ");
+      tr.innerHTML="<td class=l>"+r.date+"</td><td class=l>"+acc[0]+"<br><small style='color:var(--faint)'>"+acc[1]+"</small></td>";
+      ["spend","clicks","results","cost_per_result"].forEach(function(f){var td=document.createElement("td");var inp=document.createElement("input");inp.type="number";inp.inputMode="numeric";inp.oninput=function(){logState[key][f]=inp.value;};td.appendChild(inp);tr.appendChild(td);});
+      var tt=document.createElement("td");tt.textContent=String(r.target);tr.appendChild(tt);
+      var sd=document.createElement("td");var sel=document.createElement("select");["","Under target","At target","Over target"].forEach(function(o){var op=document.createElement("option");op.value=o;op.textContent=o||"—";sel.appendChild(op);});sel.onchange=function(){logState[key].status=sel.value;};sd.appendChild(sel);tr.appendChild(sd);
+      tb.appendChild(tr);
     });
-    t.appendChild(tb);
-    var w=document.createElement("div"); w.className="scroll"; w.appendChild(t);
-    document.getElementById("logtbl").appendChild(w);
+    t.appendChild(tb);var w=document.createElement("div");w.className="gridwrap";w.appendChild(t);document.getElementById("logtbl").appendChild(w);
   })();
 
-  // ---- Task 2 actions ----
-  var actState = {};
-  function actRows(host, items, opts){
-    items.forEach(function(it){
-      actState[it.id] = "NONE";
-      var parts = it.label.split(" — ");
-      var row = document.createElement("div"); row.className="actrow";
-      var lab = document.createElement("div"); lab.className="lab";
-      lab.innerHTML = esc(parts[0]) + (parts.length>1 ? "<small>"+esc(parts.slice(1).join(" · "))+"</small>" : "");
-      var sel = document.createElement("select");
-      opts.forEach(function(o){ var op=document.createElement("option"); op.value=o[0]; op.textContent=o[1]; sel.appendChild(op); });
-      sel.onchange=function(){ actState[it.id]=sel.value; };
-      row.appendChild(lab); row.appendChild(sel); host.appendChild(row);
-    });
-  }
-  actRows(document.getElementById("kw"), B.ITEMS.keywords, [["NONE","No action"],["PAUSE","Pause"],["FLAG","Flag (CPA high)"],["SCALE","Scale +20%"]]);
-  actRows(document.getElementById("as"), B.ITEMS.adsets, [["NONE","No action"],["PAUSE","Pause"],["FLAG","Flag (CPR high)"],["SCALE","Scale +20%"],["FREQ","Flag (frequency)"]]);
-  actRows(document.getElementById("st"), B.ITEMS.searchTerms, [["NONE","No action"],["NEG","Add as negative"]]);
+  // Task 2
+  var actState={};
+  function actRows(host,items,opts){items.forEach(function(it){actState[it.id]="NONE";var parts=it.label.split(" — ");var row=document.createElement("div");row.className="actrow";var lab=document.createElement("div");lab.className="lab";lab.innerHTML=esc(parts[0])+(parts.length>1?"<small>"+esc(parts.slice(1).join(" · "))+"</small>":"");var sel=document.createElement("select");opts.forEach(function(o){var op=document.createElement("option");op.value=o[0];op.textContent=o[1];sel.appendChild(op);});sel.onchange=function(){actState[it.id]=sel.value;};row.appendChild(lab);row.appendChild(sel);host.appendChild(row);});}
+  actRows(document.getElementById("kw"),B.ITEMS.keywords,[["NONE","No action"],["PAUSE","Pause"],["FLAG","Flag (CPA high)"],["SCALE","Scale +20%"]]);
+  actRows(document.getElementById("as"),B.ITEMS.adsets,[["NONE","No action"],["PAUSE","Pause"],["FLAG","Flag (CPR high)"],["SCALE","Scale +20%"],["FREQ","Flag (frequency)"]]);
+  actRows(document.getElementById("st"),B.ITEMS.searchTerms,[["NONE","No action"],["NEG","Add as negative"]]);
 
-  // ---- Task 3 ----
-  document.getElementById("status").value = [
-    "ADEVE DAILY STATUS — 2026-06-28","",
-    "Google (Drishti Cataract): Spend ₹___ | Leads ___ | CPA ₹___ (target ₹600) | Status: ___",
-    "Meta (Wealth Wisdom Webinar): Spend ₹___ | Regs ___ | CPR ₹___ (target ₹150) | Status: ___","",
-    "Actions (per SOP, 3-day window):","- PAUSE: ","- FLAG: ","- SCALE: ","- NEGATIVES added: ","",
-    "Flags for Singh/Prashant: "
-  ].join("\n");
+  // Task 3
+  document.getElementById("status").value=["ADEVE DAILY STATUS — 2026-06-28","","Google (Drishti Cataract): Spend ₹___ | Leads ___ | CPA ₹___ (target ₹600) | Status: ___","Meta (Wealth Wisdom Webinar): Spend ₹___ | Regs ___ | CPR ₹___ (target ₹150) | Status: ___","","Actions (per SOP, 3-day window):","- PAUSE: ","- FLAG: ","- SCALE: ","- NEGATIVES added: ","","Flags for Singh/Prashant: "].join("\n");
 
-  // ---- Task 4 ----
-  var qaState = {};
-  (function(){
-    var s = document.createElement("div"); s.className="spec";
-    s.innerHTML = '<div class="h">Field</div><div class="h">Spec (required)</div><div class="h">As-built (reported)</div><div class="h chk">Error?</div>';
-    B.QA_FIELDS.forEach(function(f){
-      qaState[f.id]=false;
-      var d1=document.createElement("div"); d1.className="lab"; d1.textContent=f.label;
-      var d2=document.createElement("div"); d2.className="spec-val"; d2.textContent=f.spec;
-      var d3=document.createElement("div"); d3.textContent=f.asbuilt;
-      var d4=document.createElement("div"); d4.className="chk"; var cb=document.createElement("input"); cb.type="checkbox";
-      cb.onchange=function(){ qaState[f.id]=cb.checked; }; d4.appendChild(cb);
-      s.appendChild(d1); s.appendChild(d2); s.appendChild(d3); s.appendChild(d4);
-    });
-    document.getElementById("qa").appendChild(s);
-  })();
+  // Task 4
+  var qaState={};
+  (function(){var s=document.createElement("div");s.className="spec";s.innerHTML='<div class="h">Field</div><div class="h">Spec (required)</div><div class="h">As-built (reported)</div><div class="h chk">Error?</div>';B.QA_FIELDS.forEach(function(f){qaState[f.id]=false;var a=document.createElement("div");a.className="lab";a.textContent=f.label;var b2=document.createElement("div");b2.className="v";b2.textContent=f.spec;var c=document.createElement("div");c.textContent=f.asbuilt;var d=document.createElement("div");d.className="chk";var cb=document.createElement("input");cb.type="checkbox";cb.onchange=function(){qaState[f.id]=cb.checked;};d.appendChild(cb);s.appendChild(a);s.appendChild(b2);s.appendChild(c);s.appendChild(d);});document.getElementById("qa").appendChild(s);})();
 
-  // ---- submit ----
-  document.getElementById("send").onclick = function(){
-    var name = document.getElementById("cname").value.trim();
-    var mail = document.getElementById("cmail").value.trim();
-    var msg = document.getElementById("msg");
-    if (!name || !/.+@.+\..+/.test(mail)){ msg.className="msg err"; msg.textContent="Enter your name and a valid email."; return; }
-    var qa = Object.keys(qaState).filter(function(k){ return qaState[k]; });
-    var sub = { name:name, email:mail, log:logState, actions:actState, status_text:document.getElementById("status").value, qa:qa };
-    var btn = this; btn.disabled = true; msg.className="msg"; msg.textContent = "Submitting…";
-    fetch(API, { method:"POST", headers:{ "content-type":"application/json" }, body:JSON.stringify({ action:"grade", submission:sub }) })
-      .then(function(r){ return r.json(); })
-      .then(function(d){
-        if (d.ok){
-          root.innerHTML = '<div class="hero done"><div class="tick">✓</div><h1>Submitted — thank you, '+esc(name)+'</h1><p class="lead" style="margin:0 auto 6px">Your assignment has been received and recorded. Reference <span class="ref">'+esc(d.ref)+'</span>.</p><p class="note">We review every submission and reply to shortlisted candidates. You can close this tab.</p></div>';
-          window.scrollTo(0,0);
-        } else { btn.disabled=false; msg.className="msg err"; msg.textContent = d.error || "Something went wrong — try again."; }
-      })
-      .catch(function(){ btn.disabled=false; msg.className="msg err"; msg.textContent = "Network error — try again."; });
+  // submit
+  document.getElementById("send").onclick=function(){
+    var name=document.getElementById("cname").value.trim(),mail=document.getElementById("cmail").value.trim(),msg=document.getElementById("msg");
+    if(!name||!/.+@.+\..+/.test(mail)){msg.className="msg err";msg.textContent="Enter your name and a valid email.";return;}
+    var qa=Object.keys(qaState).filter(function(k){return qaState[k];});
+    var sub={name:name,email:mail,log:logState,actions:actState,status_text:document.getElementById("status").value,qa:qa};
+    var btn=this;btn.disabled=true;msg.className="msg";msg.textContent="Submitting…";
+    fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({action:"grade",submission:sub})}).then(function(r){return r.json();}).then(function(d){
+      if(d.ok){root.innerHTML='<div class="done"><div class="tick">✓</div><h1>Thank you, '+esc(name)+'</h1><p class="lead">Your assignment has been received and recorded. Reference <span class="ref">'+esc(d.ref)+'</span>.</p><p class="note">We review every submission and reply to shortlisted candidates. You can close this tab.</p></div>';window.scrollTo(0,0);}
+      else{btn.disabled=false;msg.className="msg err";msg.textContent=d.error||"Something went wrong — try again.";}
+    }).catch(function(){btn.disabled=false;msg.className="msg err";msg.textContent="Network error — try again.";});
   };
 
   function sopHtml(){
@@ -297,42 +251,29 @@ pre.mono{white-space:pre-wrap;background:#f7f8fa;border:1px solid var(--line);bo
     '<tr><td class=l>R1 · Pause</td><td class=l>spend ≥ ₹3,000 AND 0 results</td><td class=l>Pause it</td></tr>'+
     '<tr><td class=l>R2 · Flag</td><td class=l>CPA/CPR ≥ 50% over target (Google ≥₹900; Meta ≥₹225)</td><td class=l>Flag — don’t pause</td></tr>'+
     '<tr><td class=l>R3 · Scale</td><td class=l>CPA/CPR ≤ 70% of target (Google ≤₹420; Meta ≤₹105) AND volume (Google ≥5 conv; Meta ≥20 regs)</td><td class=l>Raise budget 20%</td></tr>'+
-    '<tr><td class=l>R4 · Negative</td><td class=l>search term ≥ ₹800 spend AND 0 conversions (7-day figures)</td><td class=l>Add negative</td></tr>'+
+    '<tr><td class=l>R4 · Negative</td><td class=l>search term ≥ ₹800 spend AND 0 conversions (7-day)</td><td class=l>Add negative</td></tr>'+
     '<tr><td class=l>R5 · Flag freq</td><td class=l>Meta ad set frequency ≥ 3.0</td><td class=l>Flag — don’t act</td></tr>'+
     '</tbody></table></div>'+
-    '<p style="margin-top:12px"><b>Precision matters.</b> A rule fires only when its line is met. ₹450 is not a Scale. 4 conversions is not enough. ₹780 is not a Negative. At-target = no action. Pause beats Flag/Scale. We are not asking for strategy — follow the SOP exactly.</p>';
+    '<p style="margin-top:12px"><b>Precision matters.</b> A rule fires only when its line is met. ₹450 is not a Scale. 4 conversions is not enough. ₹780 is not a Negative. At-target = no action. Pause beats Flag/Scale.</p>';
   }
 
-  /* =================== ADMIN =================== */
+  /* ===== ADMIN ===== */
   function renderAdmin(){
-    document.querySelector(".topbar .note").textContent = "Internal · Grading";
-    root.innerHTML =
-      '<div class="hero"><p class="eyebrow">Internal</p><h1>Grading dashboard</h1><p class="lead">Enter the team passcode to view ranked submissions.</p>'+
-      '<div class="adm-row"><input id="pc" type="password" placeholder="Passcode" style="min-width:220px"><button class="btn" id="go">View submissions</button></div></div><div id="out"></div>';
-    var out = document.getElementById("out"), btn = document.getElementById("go");
-    btn.onclick = function(){
-      btn.disabled=true; btn.textContent="Loading…";
-      fetch(API, { method:"POST", headers:{ "content-type":"application/json" }, body:JSON.stringify({ action:"list", passcode:document.getElementById("pc").value }) })
-        .then(function(r){ return r.json(); })
-        .then(function(d){ btn.disabled=false; btn.textContent="Refresh"; if(!d.ok){ out.innerHTML='<div class="card"><p class="msg err">'+esc(d.error||"Error")+'</p></div>'; return; } draw(d.rows); })
-        .catch(function(e){ btn.disabled=false; btn.textContent="View submissions"; out.innerHTML='<div class="card"><p class="msg err">'+esc(e)+'</p></div>'; });
-    };
-    function tag(dec){ return '<span class="tag '+dec+'">'+dec+'</span>'; }
+    document.getElementById("topnote").textContent="Internal · Grading";
+    root.innerHTML='<p class="eyebrow">Internal</p><h1>Grading dashboard</h1><p class="lead">Enter the team passcode to view ranked submissions.</p><div class="adm" style="display:flex;gap:12px;flex-wrap:wrap"><input id="pc" type="password" placeholder="Passcode"><button class="btn" id="go">View</button></div><div id="out"></div>';
+    var out=document.getElementById("out"),btn=document.getElementById("go");
+    btn.onclick=function(){btn.disabled=true;btn.textContent="Loading…";fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({action:"list",passcode:document.getElementById("pc").value})}).then(function(r){return r.json();}).then(function(d){btn.disabled=false;btn.textContent="Refresh";if(!d.ok){out.innerHTML='<div class="scard"><p class="msg err">'+esc(d.error||"Error")+'</p></div>';return;}draw(d.rows);}).catch(function(e){btn.disabled=false;btn.textContent="View";out.innerHTML='<div class="scard"><p class="msg err">'+esc(e)+'</p></div>';});};
+    function tag(d){return '<span class="tag '+d+'">'+d+'</span>';}
     function draw(rows){
-      if(!rows.length){ out.innerHTML='<div class="card"><p class="note">No submissions yet.</p></div>'; return; }
-      out.innerHTML = '<p class="note" style="margin:18px 2px 8px">'+rows.length+' submission(s), ranked by total.</p>';
-      rows.forEach(function(s){
-        var bd = s.breakdown||{};
-        var card = document.createElement("div"); card.className="card";
-        var flags = (s.auto_flags||[]).map(function(f){ return '<p class="flagline">⚠ '+esc(f)+'</p>'; }).join("");
-        card.innerHTML =
-          '<div class="adm-row" style="justify-content:space-between"><div class="adm-row"><span class="score">'+s.total+'<span class="note">/12</span></span> '+tag(s.decision)+' <div><b>'+esc(s.candidate_name)+'</b> <span class="note">'+esc(s.candidate_email)+'</span></div></div><span class="note">'+new Date(s.created_at).toLocaleString()+'</span></div>'+
-          '<div class="pills"><span class="spill">Accuracy '+s.score_accuracy+'/3</span><span class="spill">Rules '+s.score_rules+'/3</span><span class="spill">Format '+s.score_format+'/3</span><span class="spill">Comms '+s.score_comms+'/3</span></div>'+
-          flags +
-          '<p class="note" style="margin-top:8px">Task 1 bad rows: '+(bd.task1?bd.task1.badRows:"?")+' · Task 2 mistakes: '+(bd.task2?bd.task2.mistakes:"?")+' (missed '+(bd.task2?bd.task2.missed.length:"?")+', extra '+(bd.task2?bd.task2.extra.length:"?")+') · Task 4 QA: +'+(bd.task4?bd.task4.correct.length:"?")+' / falsePos '+(bd.task4?bd.task4.falsePos.length:"?")+' / missed '+(bd.task4?bd.task4.falseNeg.length:"?")+'</p>'+
-          '<details class="sub"><summary class="note">Status update text</summary><pre class="mono">'+esc((s.answers&&s.answers.status_text)||"")+'</pre></details>';
-        out.appendChild(card);
-      });
+      if(!rows.length){out.innerHTML='<div class="scard"><p class="note">No submissions yet.</p></div>';return;}
+      out.innerHTML='<p class="note" style="margin:20px 0 0">'+rows.length+' submission(s), ranked by total.</p>';
+      rows.forEach(function(s){var bd=s.breakdown||{};var c=document.createElement("div");c.className="scard";
+        c.innerHTML='<div class="row"><div class="row"><span class="score">'+s.total+'<small>/12</small></span> '+tag(s.decision)+' <div><b>'+esc(s.candidate_name)+'</b> <span class="note">'+esc(s.candidate_email)+'</span></div></div><span class="note">'+new Date(s.created_at).toLocaleString()+'</span></div>'+
+        '<div class="pills"><span class="spill">Accuracy '+s.score_accuracy+'/3</span><span class="spill">Rules '+s.score_rules+'/3</span><span class="spill">Format '+s.score_format+'/3</span><span class="spill">Comms '+s.score_comms+'/3</span></div>'+
+        (s.auto_flags||[]).map(function(f){return '<p class="flag">⚠ '+esc(f)+'</p>';}).join("")+
+        '<p class="note" style="margin-top:8px">Task 1 bad rows: '+(bd.task1?bd.task1.badRows:"?")+' · Task 2 mistakes: '+(bd.task2?bd.task2.mistakes:"?")+' · Task 4 QA: +'+(bd.task4?bd.task4.correct.length:"?")+' / falsePos '+(bd.task4?bd.task4.falsePos.length:"?")+' / missed '+(bd.task4?bd.task4.falseNeg.length:"?")+'</p>'+
+        '<details><summary class="note" style="cursor:pointer;margin-top:6px">Status update text</summary><pre class="mono">'+esc((s.answers&&s.answers.status_text)||"")+'</pre></details>';
+        out.appendChild(c);});
     }
   }
 })();
